@@ -59,6 +59,7 @@ class PostController extends Controller
         ));
     }
 
+
     /**
      * Finds and displays a post entity.
      *
