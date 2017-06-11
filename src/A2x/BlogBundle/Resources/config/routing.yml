@@ -1,0 +1,7 @@
+a2x_blog_post:
+    resource: "@A2xBlogBundle/Resources/config/routing/post.yml"
+    prefix:   /post
+
+a2x_blog_homepage:
+    path:     /
+    defaults: { _controller: A2xBlogBundle:Default:index }

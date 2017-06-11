@@ -1,0 +1,6 @@
+services:
+    a2x_blog.flash_listener:
+       class: A2x\BlogBundle\Listener\FlashListener
+       arguments: ["@session"]
+       tags: 
+          - {name: kernel.event_subscriber}

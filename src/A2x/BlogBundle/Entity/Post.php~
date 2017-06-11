@@ -1,0 +1,61 @@
+<?php
+
+namespace A2x\BlogBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+/**
+ * @ORM\Entity(repositoryClass="PostRepository")
+ * @ORM\Table(name="a2x_blog_post")
+ * @ORM\HasLifecycleCallbacks
+ */
+class Post
+{
+    /**
+     * @ORM\Id()
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+   /**
+    * @ORM\Column(name="title", type="string", length=128)
+    */
+    
+    protected $title;
+
+    /**
+     * @ORM\Column(name="description", type="string", length=255)
+     */
+    protected $description;
+
+    /**
+     * @ORM\Column(name="text", type="text")
+     */
+    protected $text;
+
+
+    /**
+     * @ORM\Column(name="published", type="boolean")
+     */
+    protected $published=false;
+    
+    /**
+     * @ORM\Column(name="created", type="datetime")
+     */
+    protected $created;
+
+    /**
+     * @ORM\Column(name="updated", type="datetime")
+     */
+    protected $updated;
+
+    public function __toString(){
+    	return $this->title;
+    }
+
+ 
+
+    
+}
